@@ -1,15 +1,7 @@
-/* Assignment 1: Change Background Color */
+/* Assignment 2: Display names */
 
 body {
- 
-  height:100%;
-  width: 100%;
-}
-  
-  
- 
-
-
-  
-  
-  
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }

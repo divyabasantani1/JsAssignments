@@ -1,19 +1,21 @@
-// Assignment 1: Change Background Color
+// Assignment 2: Display names
 
-function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+const names = ["Aarav", "Sanya", "Vikram", "Neha", "Rohan", "Priya", "Amit", "Meera", "Rajiv", "Ananya"];
+  let currentIndex = 0;
+
+  function showCurrentName() {
+    const nameDisplay = document.getElementById('nameDisplay');
+    nameDisplay.textContent = names[currentIndex];
   }
-  return color;
-}
 
+  function showNext() {
+    currentIndex = (currentIndex + 1) % names.length;
+    showCurrentName();
+  }
 
-function changeBackgroundColor() {
-  const randomColor = getRandomColor();
-  document.body.style.backgroundColor = randomColor;
-  colorCode.textContent = randomColor;
-}
+  function showPrevious() {
+    currentIndex = (currentIndex - 1 + names.length) % names.length;
+    showCurrentName();
+  }
 
-addEventListener('click', changeBackgroundColor);
+  showCurrentName();
